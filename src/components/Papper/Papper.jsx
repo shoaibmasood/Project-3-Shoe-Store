@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-
+import { Paper } from '@material-ui/core';
+import Navbar from '../Navbar/Navbar';
 const useStyles = makeStyles({
   paper: {
     dsiplay: 'flex',
@@ -20,7 +20,9 @@ export default function Papper() {
 
   return (
     <div>
-      <Paper elevation={10} className={classes.paper} />
+      <Paper elevation={10} className={classes.paper}>
+        <Navbar />
+      </Paper>
     </div>
   );
 }

@@ -1,0 +1,12 @@
+.container {
+  background-color: #fcf5ca;
+  border-radius: 10px;
+  display: block;
+}
+
+li {
+  list-style-type: none;
+}
+ul > li {
+  display: flex;
+}
