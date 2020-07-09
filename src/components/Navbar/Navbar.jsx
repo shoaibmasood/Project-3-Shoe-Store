@@ -1,7 +1,16 @@
 import React from 'react';
 // import styles from './Navbar.module.css';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Badge,
+  IconButton,
+} from '@material-ui/core';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { makeStyles } from '@material-ui/core/styles';
+
 import logo from '../../assests/png/1806029.png';
 
 const useStyles = makeStyles({
@@ -25,7 +34,7 @@ const useStyles = makeStyles({
   toolbar: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
   },
 });
 
@@ -36,9 +45,25 @@ const Navbar = () => {
     <div>
       <AppBar position="sticky" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
-          {/* <Typography>Nike</Typography> */}
+          <Typography>Nike Shoe Store</Typography>
           <div>
-            <img src={logo} alt="nikelogo" style={{ width: 55, height: 55 }} />
+            <img
+              src={logo}
+              alt="nikelogo"
+              style={{ width: '5em', height: '5em' }}
+            />
+          </div>
+          <div>
+            <IconButton aria-label="show 17 new notifications" color="inherit">
+              <Badge badgeContent={17} color="secondary">
+                <NotificationsIcon />
+              </Badge>
+            </IconButton>
+            <IconButton aria-label="show 17 new notifications" color="inherit">
+              <Badge badgeContent={2} color="secondary">
+                <ShoppingCartIcon />
+              </Badge>
+            </IconButton>
           </div>
         </Toolbar>
       </AppBar>
