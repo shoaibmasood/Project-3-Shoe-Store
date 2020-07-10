@@ -1,4 +1,4 @@
-export default productData = [
+const productData = [
   {
     title: 'air-zoom-pegasus',
     price: `$${220}`,
@@ -73,3 +73,4 @@ export default productData = [
     description: 'details about product',
   },
 ];
+export default productData;

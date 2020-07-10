@@ -10,25 +10,15 @@ import {
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { makeStyles } from '@material-ui/core/styles';
-
 import logo from '../../assests/png/1806029.png';
 
 const useStyles = makeStyles({
-  // container: {
-  //   display: 'flex',
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // },
   appbar: {
     backgroundColor: '#fcf5ca',
     color: 'black',
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
-
     width: '95vw',
-    position: 'absolute',
-    top: '4.5em',
-    right: '2.9em',
   },
 
   toolbar: {
@@ -46,6 +36,7 @@ const Navbar = () => {
       <AppBar position="sticky" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
           <Typography>Nike Shoe Store</Typography>
+
           <div>
             <img
               src={logo}
