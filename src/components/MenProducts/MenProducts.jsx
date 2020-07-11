@@ -16,9 +16,12 @@ const useStyles = makeStyles({
     // alignItems: 'flex-end',
     // // justifyContent: 'flex-end',
     // // alignContent: 'flex-start',
-    // marginLeft: '-10em',
+    // marginLeft: '2em',
+    // overflow: 'auto',
+    // marginRight: '1em',
     // overflowX: 'hidden',
     // overflowY: 'scroll',
+    // flexWrap: 'wrap',
   },
 
   thumbnail: {
@@ -33,7 +36,16 @@ const useStyles = makeStyles({
       transform: 'scale(1.08)',
       opacity: 1,
       borderLeft: '5px solid #c4a068',
+      cursor: 'pointer',
     },
+  },
+  imageContainer: {
+    background: '#f5cb52',
+    borderRadius: '50%',
+    width: '500px',
+    height: '500px',
+    margin: '0 auto',
+    marginTop: '3em',
   },
 });
 
@@ -47,16 +59,23 @@ const MenProducts = () => {
       spacing={3}
       className={classes.container}
     >
-      <Grid item xs={12} md={3}>
+      <Grid item xs={12} md={2} container>
         <div className={classes.thumbnailContainer}>
           {datas.map((data) => (
-            <img src={data.thumbnail} alt="" className={classes.thumbnail} />
+            <img
+              key={data.id}
+              src={data.thumbnail}
+              alt=""
+              className={classes.thumbnail}
+            />
           ))}
         </div>
       </Grid>
-      <Grid item xs={12} md={5}>
-        <Typography>main image</Typography>
+
+      <Grid item xs={12} md={6}>
+        <div className={classes.imageContainer}></div>
       </Grid>
+
       <Grid item xs={12} md={4}>
         <Typography>cart and product description</Typography>
       </Grid>

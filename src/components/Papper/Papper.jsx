@@ -15,6 +15,7 @@ const useStyles = makeStyles({
     width: '95vw',
     backgroundColor: '#fefbec',
     borderRadius: 15,
+    overflow: 'hidden',
   },
   // container: {
   //   color: 'black',

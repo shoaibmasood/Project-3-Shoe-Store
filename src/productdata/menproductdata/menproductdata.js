@@ -1,5 +1,6 @@
 const productData = [
   {
+    id: 1,
     title: 'air-zoom-pegasus-trail-running',
     price: `$${220}`,
     sizes: [
@@ -15,6 +16,7 @@ const productData = [
     description: 'details about product',
   },
   {
+    id: 2,
     title: 'air-zoom-unvrs',
     price: `$${250}`,
     sizes: [
@@ -31,6 +33,7 @@ const productData = [
   },
 
   {
+    id: 3,
     title: 'zoom-d-unisex',
     price: `$${220}`,
     sizes: [
@@ -47,6 +50,7 @@ const productData = [
   },
 
   {
+    id: 4,
     title: 'air-max-270',
     price: `$${330}`,
     sizes: [
@@ -64,6 +68,7 @@ const productData = [
   },
 
   {
+    id: 5,
     title: 'air-zoom-pegasus-running',
     price: `$${220}`,
     sizes: [
@@ -81,6 +86,7 @@ const productData = [
   },
 
   {
+    id: 6,
     title: 'nike-react-infinity',
     price: `$${220}`,
     sizes: [
@@ -93,6 +99,57 @@ const productData = [
     ],
     // img: require('../../assests/png/'),
     thumbnail: require('../../assests/custom-nike-react-infinity-run-flyknit-by-you.jpg'),
+
+    description: 'details about product',
+  },
+  {
+    id: 7,
+    title: 'air-zoom-pegasus-running',
+    price: `$${220}`,
+    sizes: [
+      { size: 7, available: true },
+      { size: 8, available: true },
+      { size: 9, available: false },
+      { size: 10, available: false },
+      { size: 11, available: true },
+      { size: 12, available: false },
+    ],
+    img: require('../../assests/png/air-zoom-pegasus-36-mens-running-shoe-D24Mcz-1-.png'),
+    thumbnail: require('../../assests/air-zoom-pegasus-36-mens-running-shoe-D24Mcz.jpg'),
+
+    description: 'details about product',
+  },
+  {
+    id: 8,
+    title: 'air-zoom-pegasus-running',
+    price: `$${220}`,
+    sizes: [
+      { size: 7, available: true },
+      { size: 8, available: true },
+      { size: 9, available: false },
+      { size: 10, available: false },
+      { size: 11, available: true },
+      { size: 12, available: false },
+    ],
+    img: require('../../assests/png/air-zoom-pegasus-36-mens-running-shoe-D24Mcz-1-.png'),
+    thumbnail: require('../../assests/air-zoom-pegasus-36-mens-running-shoe-D24Mcz.jpg'),
+
+    description: 'details about product',
+  },
+  {
+    id: 9,
+    title: 'air-zoom-pegasus-running',
+    price: `$${220}`,
+    sizes: [
+      { size: 7, available: true },
+      { size: 8, available: true },
+      { size: 9, available: false },
+      { size: 10, available: false },
+      { size: 11, available: true },
+      { size: 12, available: false },
+    ],
+    img: require('../../assests/png/air-zoom-pegasus-36-mens-running-shoe-D24Mcz-1-.png'),
+    thumbnail: require('../../assests/air-zoom-pegasus-36-mens-running-shoe-D24Mcz.jpg'),
 
     description: 'details about product',
   },
