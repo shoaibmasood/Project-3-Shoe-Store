@@ -1,7 +1,7 @@
 const productData = [
   {
     id: 1,
-    title: 'air-zoom-pegasus-trail-running',
+    title: 'air zoom pegasus trail',
     price: `$${220}`,
     sizes: [
       { size: 7, available: true },
@@ -12,12 +12,12 @@ const productData = [
       { size: 12, available: false },
     ],
     img: require('../../assests/png/air-zoom-pegasus-36-trail-mens-trail-running-shoe-r48p3j-1-.png'),
-    thumbnail: require('../../assests/air-zoom-pegasus-36-trail-mens-trail-running-shoe-r48p3j (1).jpg'),
+    thumbnail: require('../../assests/air-zoom-pegasus-36-trail-mens-trail-running-shoe-r48p3j.jpg'),
     description: 'details about product',
   },
   {
     id: 2,
-    title: 'air-zoom-unvrs',
+    title: 'air zoom univers',
     price: `$${250}`,
     sizes: [
       { size: 7, available: true },
@@ -34,7 +34,7 @@ const productData = [
 
   {
     id: 3,
-    title: 'zoom-d-unisex',
+    title: 'zoom d unisex',
     price: `$${220}`,
     sizes: [
       { size: 7, available: true },
@@ -51,7 +51,7 @@ const productData = [
 
   {
     id: 4,
-    title: 'air-max-270',
+    title: 'air max 270',
     price: `$${330}`,
     sizes: [
       { size: 7, available: true },
@@ -69,7 +69,7 @@ const productData = [
 
   {
     id: 5,
-    title: 'air-zoom-pegasus-running',
+    title: 'air zoom pegasus running',
     price: `$${220}`,
     sizes: [
       { size: 7, available: true },
@@ -87,7 +87,7 @@ const productData = [
 
   {
     id: 6,
-    title: 'nike-react-infinity',
+    title: 'nike react infinity',
     price: `$${220}`,
     sizes: [
       { size: 7, available: true },
@@ -97,7 +97,7 @@ const productData = [
       { size: 11, available: true },
       { size: 12, available: false },
     ],
-    // img: require('../../assests/png/'),
+    img: require('../../assests/png/custom-nike-react-infinity-run-flyknit-by-you-1-.png'),
     thumbnail: require('../../assests/custom-nike-react-infinity-run-flyknit-by-you.jpg'),
 
     description: 'details about product',

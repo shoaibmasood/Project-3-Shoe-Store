@@ -1,8 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography, Button } from '@material-ui/core';
 import circlelogo from '../../assests/png/circle.png';
 import datas from '../../productdata/menproductdata/menproductdata';
+// import productData from '../../productdata/menproductdata/menproductdata';
 
 const useStyles = makeStyles({
   container: {
@@ -45,45 +46,23 @@ const useStyles = makeStyles({
 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    width: '600px',
-    maxHeight: '600px',
+    width: '700px',
+    maxHeight: '700px',
     margin: '0 auto',
-    // backgroundRepeat: 'no-repeat',
-    // backgroundAttachment: 'fixed',
-    // marginLeft: '2em',
-    // objectFit: 'cover',
-
-    // background: '#f5cb52',
-    // borderRadius: '50%',
-    // maxHeight: '500px',
-
-    // marginTop: '1em',
-    // border: '2px solid green',
-  },
-
-  imageContainer: {
-    // width: '100%',
-    // height: '100%',
-    // objectFit: 'cover',
   },
 
   image: {
-    // objectFit: 'contain',
-    // width: '100%',
-    height: '800px',
+    height: '875px',
     // border: '1px solid red',
     marginTop: '-9em',
     transform: 'rotate(30deg)',
-    // position: 'relative',
-    // transform:
-
-    // maxHeight: '450px',
   },
 });
 
-const MenProducts = () => {
+const MenProducts = ({ handleClickImage, productdata }) => {
   const classes = useStyles();
-  const productimg = datas[0].img;
+
+  console.log(productdata);
   return (
     <Grid
       container
@@ -99,6 +78,9 @@ const MenProducts = () => {
               src={data.thumbnail}
               alt=""
               className={classes.thumbnail}
+              onClick={() => {
+                handleClickImage(data.id);
+              }}
             />
           ))}
         </div>
@@ -106,12 +88,31 @@ const MenProducts = () => {
 
       <Grid container item xs={12} md={6}>
         <div className={classes.backgroundContainer}>
-          <img src={productimg} alt="" className={classes.image} />
+          <img src={productdata.img} alt="" className={classes.image} />
         </div>
       </Grid>
 
       <Grid item xs={12} md={4}>
-        <Typography>cart and product description</Typography>
+        <div>
+          <Typography variant="h4">Men's Running Shoe</Typography>
+        </div>
+        <di>
+          <Typography variant="h3">{productdata.title}</Typography>
+        </di>
+        <div>
+          <Typography variant="h3">{productdata.price}</Typography>
+        </div>
+        <div>
+          <Typography variant="h3">SelectSize</Typography>
+          <Typography variant="h3">Size Guide</Typography>
+        </div>
+        <div>
+          <Button> ADD to BAG</Button>
+          <Button>ICON HEart</Button>
+        </div>
+        <div>
+          <Typography variant="h3">{productdata.description}</Typography>
+        </div>
       </Grid>
     </Grid>
   );
