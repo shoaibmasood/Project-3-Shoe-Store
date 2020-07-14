@@ -17,15 +17,16 @@ const useStyles = makeStyles({
     width: '95vw',
     backgroundColor: '#fefbec',
     borderRadius: 15,
-    // overflow: 'hidden',
+    overflow: 'hidden',
   },
 });
 
 const Papper = () => {
   const classes = useStyles();
+
   const initialState = MenDatas[0];
   const [productdata, setproductData] = useState(initialState);
-  // const [cart, setCart] = useState(0);
+  const [cart, setCart] = useState(0);
 
   const handleClickImage = (id) => {
     console.log(id);
@@ -33,19 +34,21 @@ const Papper = () => {
     setproductData(foundproduct);
   };
 
-  // const handleClickCart = () => {
+  const handleClickCart = () => {
+    setCart(cart + 1);
+  };
 
-  // }
+  // console.log(cart);
 
   return (
     <div>
       <Paper elevation={10} className={classes.paper}>
-        <Navbar />
+        <Navbar cart={cart} />
 
         <MenProducts
           productdata={productdata}
           handleClickImage={handleClickImage}
-          // handleClickCart={handleClickCart}
+          handleClickCart={handleClickCart}
         />
       </Paper>
     </div>

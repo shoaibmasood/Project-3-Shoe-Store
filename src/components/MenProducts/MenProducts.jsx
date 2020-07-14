@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography, Button } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -7,6 +7,7 @@ import datas from '../../productdata/menproductdata/menproductdata';
 
 const useStyles = makeStyles({
   container: {
+    // display: 'flex',
     color: 'black',
     // border: '1px solid red',
     marginTop: '2em',
@@ -21,8 +22,10 @@ const useStyles = makeStyles({
     // marginLeft: '2em',
     // overflow: 'auto',
     // marginRight: '1em',
-    // overflowX: 'hidden',
-    // overflowY: 'scroll',
+
+    overflowX: 'hidden',
+    overflowY: 'scroll',
+    height: '60vh',
     // flexWrap: 'wrap',
   },
 
@@ -107,12 +110,20 @@ const useStyles = makeStyles({
   },
 });
 
-const MenProducts = ({ handleClickImage, productdata }) => {
+const MenProducts = ({ handleClickImage, handleClickCart, productdata }) => {
   const classes = useStyles();
   // console.log(productdata.sizes);
   // const shoesizes = productdata.sizes.map((data) => data.size);
   // console.log(shoesizes);
 
+  const [isToggle, setisToggle] = useState(false);
+
+  const handleClickToggle = () => {
+    let toggle = !isToggle;
+    setisToggle(toggle);
+  };
+
+  console.log(isToggle);
   return (
     <Grid
       container
@@ -120,7 +131,7 @@ const MenProducts = ({ handleClickImage, productdata }) => {
       spacing={3}
       className={classes.container}
     >
-      <Grid item xs={12} md={2} container>
+      <Grid item xs={12} sm={2} md={2} container>
         <div className={classes.thumbnailContainer}>
           {datas.map((data) => (
             <img
@@ -166,10 +177,16 @@ const MenProducts = ({ handleClickImage, productdata }) => {
             variant="contained"
             size="large"
             className={classes.buttoncart}
+            onClick={handleClickCart}
           >
             ADD to BAG
           </Button>
-          <Button variant="contained" className={classes.buttonheart}>
+          <Button
+            variant="contained"
+            className={classes.buttonheart}
+            onClick={handleClickToggle}
+            style={{ color: isToggle ? 'red' : 'black' }}
+          >
             <FavoriteIcon />
           </Button>
         </div>
