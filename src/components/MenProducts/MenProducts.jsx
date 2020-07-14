@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography, Button } from '@material-ui/core';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import circlelogo from '../../assests/png/circle.png';
 import datas from '../../productdata/menproductdata/menproductdata';
@@ -59,10 +58,10 @@ const useStyles = makeStyles({
     transform: 'rotate(30deg)',
   },
 
-  cardcontainer: {
+  cartcontainer: {
     marginTop: '1em',
     // marginRight: '1em',
-    border: '1px solid red',
+    // border: '1px solid red',
   },
 
   mainheading: {
@@ -83,6 +82,7 @@ const useStyles = makeStyles({
     display: 'flex',
     marginTop: '5em',
     justifyContent: 'space-evenly',
+    marginBottom: '3em',
   },
 
   buttoncart: {
@@ -99,6 +99,11 @@ const useStyles = makeStyles({
     '&:hover': {
       backgroundColor: '#FCF5CA',
     },
+  },
+
+  cartdescription: {
+    marginRight: '2em',
+    marginLeft: '1em',
   },
 });
 
@@ -137,7 +142,7 @@ const MenProducts = ({ handleClickImage, productdata }) => {
         </div>
       </Grid>
 
-      <Grid item xs={12} md={4} className={classes.cardcontainer}>
+      <Grid item xs={12} md={4} className={classes.cartcontainer}>
         <div>
           <Typography variant="h5">Men's Running Shoe</Typography>
         </div>
@@ -169,7 +174,13 @@ const MenProducts = ({ handleClickImage, productdata }) => {
           </Button>
         </div>
         <div>
-          <Typography variant="h3">{productdata.description}</Typography>
+          <Typography
+            variant="body1"
+            align="justify"
+            className={classes.cartdescription}
+          >
+            {productdata.description}
+          </Typography>
         </div>
       </Grid>
     </Grid>
