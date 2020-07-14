@@ -1,9 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography, Button } from '@material-ui/core';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import circlelogo from '../../assests/png/circle.png';
 import datas from '../../productdata/menproductdata/menproductdata';
-// import productData from '../../productdata/menproductdata/menproductdata';
 
 const useStyles = makeStyles({
   container: {
@@ -57,12 +58,56 @@ const useStyles = makeStyles({
     marginTop: '-9em',
     transform: 'rotate(30deg)',
   },
+
+  cardcontainer: {
+    marginTop: '1em',
+    // marginRight: '1em',
+    border: '1px solid red',
+  },
+
+  mainheading: {
+    fontFamily: 'Anton, sans-serif',
+    color: '#f4ca51',
+    textTransform: 'capitalize',
+  },
+
+  sizecontianer: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    fontFamily: 'Robot, sans-serif',
+    textTransform: 'uppercase',
+    marginTop: '1em',
+  },
+
+  buttoncontainer: {
+    display: 'flex',
+    marginTop: '5em',
+    justifyContent: 'space-evenly',
+  },
+
+  buttoncart: {
+    color: 'white',
+    backgroundColor: '#f5cb52',
+    width: '20em',
+    '&:hover': {
+      backgroundColor: '#FCF5CA',
+      color: 'black',
+    },
+  },
+  buttonheart: {
+    backgroundColor: 'white',
+    '&:hover': {
+      backgroundColor: '#FCF5CA',
+    },
+  },
 });
 
 const MenProducts = ({ handleClickImage, productdata }) => {
   const classes = useStyles();
+  // console.log(productdata.sizes);
+  // const shoesizes = productdata.sizes.map((data) => data.size);
+  // console.log(shoesizes);
 
-  console.log(productdata);
   return (
     <Grid
       container
@@ -92,23 +137,36 @@ const MenProducts = ({ handleClickImage, productdata }) => {
         </div>
       </Grid>
 
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} md={4} className={classes.cardcontainer}>
         <div>
-          <Typography variant="h4">Men's Running Shoe</Typography>
+          <Typography variant="h5">Men's Running Shoe</Typography>
         </div>
-        <di>
-          <Typography variant="h3">{productdata.title}</Typography>
-        </di>
-        <div>
+        <div style={{ marginTop: '1em' }}>
+          <Typography variant="h3" className={classes.mainheading}>
+            {productdata.title}
+          </Typography>
+        </div>
+        <div style={{ marginTop: '1em' }}>
           <Typography variant="h3">{productdata.price}</Typography>
         </div>
-        <div>
-          <Typography variant="h3">SelectSize</Typography>
-          <Typography variant="h3">Size Guide</Typography>
+        <div className={classes.sizecontianer}>
+          <Typography variant="h6">SelectSize</Typography>
+          <Typography variant="h6">Size Guide</Typography>
         </div>
         <div>
-          <Button> ADD to BAG</Button>
-          <Button>ICON HEart</Button>
+          {/* <Typography>{productdata.sizes.map((data) => data.size)}</Typography> */}
+        </div>
+        <div className={classes.buttoncontainer}>
+          <Button
+            variant="contained"
+            size="large"
+            className={classes.buttoncart}
+          >
+            ADD to BAG
+          </Button>
+          <Button variant="contained" className={classes.buttonheart}>
+            <FavoriteIcon />
+          </Button>
         </div>
         <div>
           <Typography variant="h3">{productdata.description}</Typography>

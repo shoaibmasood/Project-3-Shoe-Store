@@ -23,13 +23,19 @@ const useStyles = makeStyles({
 
 const Papper = () => {
   const classes = useStyles();
-  const [productdata, setproductData] = useState({});
+  const initialState = MenDatas[0];
+  const [productdata, setproductData] = useState(initialState);
+  // const [cart, setCart] = useState(0);
 
   const handleClickImage = (id) => {
     console.log(id);
     const foundproduct = MenDatas.find((data) => data.id === id);
     setproductData(foundproduct);
   };
+
+  // const handleClickCart = () => {
+
+  // }
 
   return (
     <div>
@@ -39,6 +45,7 @@ const Papper = () => {
         <MenProducts
           productdata={productdata}
           handleClickImage={handleClickImage}
+          // handleClickCart={handleClickCart}
         />
       </Paper>
     </div>
