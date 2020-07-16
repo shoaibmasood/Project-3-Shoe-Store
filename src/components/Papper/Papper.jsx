@@ -7,17 +7,18 @@ import MenDatas from '../../productdata/menproductdata/menproductdata';
 import { useState } from 'react';
 
 const useStyles = makeStyles({
-  paper: {
-    dsiplay: 'flex',
-    // flexDirection: 'column',
-    // justifyContent: 'center',
-    // alignItems: 'center',
+  papercontainer: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
 
+  paper: {
+    // dsiplay: 'flex',
     height: '85vh',
     width: '95vw',
     backgroundColor: '#fefbec',
     borderRadius: 15,
-    overflow: 'hidden',
+    // overflow: 'hidden',
   },
 });
 
@@ -41,8 +42,8 @@ const Papper = () => {
   // console.log(cart);
 
   return (
-    <div>
-      <Paper elevation={10} className={classes.paper}>
+    <Paper elevation={10} className={classes.paper}>
+      <div className={classes.papercontainer}>
         <Navbar cart={cart} />
 
         <MenProducts
@@ -50,8 +51,8 @@ const Papper = () => {
           handleClickImage={handleClickImage}
           handleClickCart={handleClickCart}
         />
-      </Paper>
-    </div>
+      </div>
+    </Paper>
   );
 };
 export default Papper;
