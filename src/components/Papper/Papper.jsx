@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper } from '@material-ui/core';
 import MenProducts from '../MenProducts/MenProducts';
+import WomenProducts from '../WomenProducts/WomenProducts';
 import Navbar from '../Navbar/Navbar';
 import MenDatas from '../../productdata/menproductdata/menproductdata';
-import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 const useStyles = makeStyles({
   papercontainer: {
@@ -45,12 +46,20 @@ const Papper = () => {
     <Paper elevation={10} className={classes.paper}>
       <div className={classes.papercontainer}>
         <Navbar cart={cart} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <MenProducts
+                productdata={productdata}
+                handleClickImage={handleClickImage}
+                handleClickCart={handleClickCart}
+              />
+            }
+          />
 
-        <MenProducts
-          productdata={productdata}
-          handleClickImage={handleClickImage}
-          handleClickCart={handleClickCart}
-        />
+          <Route path="womenproducts" element={<WomenProducts />} />
+        </Routes>
       </div>
     </Paper>
   );
