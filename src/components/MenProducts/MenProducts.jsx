@@ -20,14 +20,13 @@ const useStyles = makeStyles({
     border: '1px solid pink',
     display: 'flex',
     flexDirection: 'column',
-    marginTop: '1em',
     overflowX: 'hidden',
     overflowY: 'scroll',
     height: '60vh',
     '&::-webkit-scrollbar': {
       display: 'none',
     },
-    '@media screen and (max-width: 1020px)': {
+    '@media screen and (max-width: 1025px)': {
       flexDirection: 'row',
       height: '10vh',
     },
@@ -48,28 +47,47 @@ const useStyles = makeStyles({
       cursor: 'pointer',
     },
   },
-  backgroundContainer: {
+  Wrapper: {
     backgroundImage: `url(${circlelogo})`,
     border: '1px solid purple',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-
-    width: '700px',
-    maxHeight: '700px',
-    margin: '0 auto',
-    '@media screen and (max-width: 1020px)': {
-      width: '400px',
-      maxHeight: '400px',
-      margin: 0,
+    position: 'relative',
+    padding: '35%',
+    '@media screen and (max-width: 1400px)': {
+      marginTop: '2em',
+    },
+    '@media screen and (max-width: 1300px)': {
+      marginTop: '4em',
+    },
+    '@media screen and (max-width: 1100px)': {
+      marginTop: '5em',
+    },
+    '@media screen and (max-width: 1025px)': {
+      marginTop: '-1em',
+      padding: '22%',
     },
   },
 
   image: {
-    height: '875px',
-    marginTop: '-9em',
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    width: '75%',
+    height: 'auto',
     transform: 'rotate(30deg)',
-    '@media screen and (max-width: 1020px)': {
-      height: '600px',
+    marginTop: '-9rem',
+    marginLeft: '5rem',
+    '@media screen and (max-width: 1300px)': {
+      marginTop: '-7rem',
+    },
+    '@media screen and (max-width: 1100px)': {
+      marginTop: '-6rem',
+    },
+    '@media screen and (max-width: 1025px)': {
+      width: '60%',
+      marginLeft: '10rem',
+      marginTop: '-11rem',
     },
   },
 
@@ -93,6 +111,10 @@ const useStyles = makeStyles({
     fontFamily: 'Anton, sans-serif',
     color: '#f4ca51',
     textTransform: 'capitalize',
+    fontSize: '3.5rem',
+    '@media screen and (max-width: 1200px)': {
+      fontSize: '2.5rem',
+    },
   },
 
   sizeheading: {
@@ -100,14 +122,15 @@ const useStyles = makeStyles({
     justifyContent: 'space-between',
     fontFamily: 'Robot, sans-serif',
     textTransform: 'uppercase',
-    marginTop: '4em',
+    marginTop: '1em',
     marginRight: '2.5em',
   },
 
   shoesizecontainer: {
     display: 'flex',
     justifyContent: 'space-evenly',
-    marginTop: '3em',
+    // alignItems: 'center',
+    // marginTop: '3em',
     marginLeft: '-2em',
   },
 
@@ -125,6 +148,9 @@ const useStyles = makeStyles({
     marginTop: '5em',
     justifyContent: 'space-evenly',
     marginBottom: '3em',
+    '@media screen and (max-width: 1575px)': {
+      marginTop: '2em',
+    },
   },
 
   buttoncart: {
@@ -167,7 +193,7 @@ const MenProducts = ({ handleClickImage, handleClickCart, productdata }) => {
       spacing={1}
       className={classes.container}
     >
-      <Grid item xs={12} md={2}>
+      <Grid item xs={12} sm={12} md={2}>
         <div className={classes.thumbnailContainer}>
           {datas.map((data) => (
             <img
@@ -183,24 +209,24 @@ const MenProducts = ({ handleClickImage, handleClickCart, productdata }) => {
         </div>
       </Grid>
 
-      <Grid item xs={6} md={6}>
-        <div className={classes.backgroundContainer}>
+      <Grid item xs={12} sm={6} md={5}>
+        <div className={classes.Wrapper}>
           <img src={productdata.img} alt="" className={classes.image} />
         </div>
       </Grid>
 
-      <Grid item xs={6} md={4}>
+      <Grid item xs={12} sm={6} md={5}>
         <div className={classes.cartcontainer}>
           <div>
             <Typography variant="h5">Men's Running Shoe</Typography>
           </div>
           <div style={{ marginTop: '1em' }}>
-            <Typography variant="h3" className={classes.mainheading}>
+            <Typography className={classes.mainheading}>
               {productdata.title}
             </Typography>
           </div>
           <div style={{ marginTop: '1em' }}>
-            <Typography variant="h3">{productdata.price}</Typography>
+            <Typography variant="h4">{productdata.price}</Typography>
           </div>
           <div className={classes.sizeheading}>
             <Typography variant="h6">Select Size</Typography>

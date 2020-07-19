@@ -9,12 +9,13 @@ import { Routes, Route } from 'react-router-dom';
 
 const useStyles = makeStyles({
   papercontainer: {
-    display: 'flex',
-    flexDirection: 'column',
+    // display: 'flex',
   },
 
   paper: {
-    // dsiplay: 'flex',
+    dsiplay: 'flex',
+    flexDirection: 'column',
+
     height: '85vh',
     width: '95vw',
     backgroundColor: '#fefbec',

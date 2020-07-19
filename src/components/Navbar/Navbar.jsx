@@ -38,6 +38,7 @@ const useStyles = makeStyles({
   navlinkwomen: {
     marginLeft: '1em',
     fontFamily: 'Robot, sans-serif',
+    fontSize: '1em',
 
     color: 'black',
   },
