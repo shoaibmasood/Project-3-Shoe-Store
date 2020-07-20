@@ -13,12 +13,12 @@ const useStyles = makeStyles({
   },
 
   paper: {
-    dsiplay: 'flex',
-    flexDirection: 'column',
-
-    height: '85vh',
+    // dsiplay: 'flex',
+    // flexDirection: 'column',
+    height: 'auto',
     width: '95vw',
     backgroundColor: '#fefbec',
+    border: '3px solid green',
     borderRadius: 15,
     // overflow: 'hidden',
   },
