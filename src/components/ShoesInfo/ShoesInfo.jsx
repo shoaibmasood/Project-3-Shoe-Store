@@ -8,13 +8,14 @@ const useStyles = makeStyles({
     marginTop: '1em',
     display: 'flex',
     flexDirection: 'column',
-    border: '1px solid lightblue',
     '@media screen and (max-width: 960px)': {
       marginTop: 0,
     },
-    // '@media screen and (max-width: 1025px)': {
-    //   flexDirection: 'row',
-    // height: '10vh',
+  },
+
+  subheading: {
+    fontFamily: 'Robot, sans-serif',
+    textAlign: 'center',
   },
 
   mainheading: {
@@ -62,14 +63,8 @@ const useStyles = makeStyles({
     flexWrap: 'wrap',
   },
 
-  //   '@media screen and (max-width: 1025px)': {
-  //     flexDirection: 'row',
-  //     height: '10vh',
-  //   },
-
   shoesize: {
     borderRadius: 15,
-    // marginRight: '1em',
     backgroundColor: '#fcf5ca',
     '&:hover': {
       backgroundColor: '#f5cb52',
@@ -81,10 +76,6 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-evenly',
     marginBottom: '1.5em',
-
-    // '@media screen and (max-width: 1575px)': {
-    //   marginTop: '2em',
-    // },
   },
 
   buttoncart: {
@@ -125,8 +116,8 @@ const ShoesInfo = ({ productdata, handleClickCart }) => {
 
   return (
     <div className={classes.cartcontainer}>
-      <div>
-        <Typography variant="h5">Men's Running Shoe</Typography>
+      <div className={classes.subheading}>
+        <h2>Men's Running Shoe</h2>
       </div>
       <div style={{ marginTop: '1em' }}>
         <Typography className={classes.mainheading}>

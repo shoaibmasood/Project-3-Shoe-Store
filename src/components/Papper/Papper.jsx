@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     height: 'auto',
     width: '95vw',
     backgroundColor: '#fefbec',
-    border: '3px solid green',
+    // border: '3px solid green',
     borderRadius: 15,
     // overflow: 'hidden',
   },

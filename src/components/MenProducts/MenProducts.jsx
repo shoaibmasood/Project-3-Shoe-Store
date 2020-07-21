@@ -7,22 +7,8 @@ import ShoesInfo from '../ShoesInfo/ShoesInfo';
 
 const useStyles = makeStyles({
   container: {
-    // display: 'flex',
-    // height: 'auto',
     color: 'black',
-    // border: '1px solid red',
-    // marginTop: '2em',
-    // '@media screen and (max-width: 1025px)': {
-    //   flexDirection: 'column',
-    // },
   },
-
-  // infocontainer: {
-  //   '@media screen and (max-width: 1025px)': {
-  //     width: '300px',
-  //     height: '300px',
-  //   },
-  // },
 });
 
 const MenProducts = ({ handleClickImage, handleClickCart, productdata }) => {

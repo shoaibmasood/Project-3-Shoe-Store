@@ -28,19 +28,42 @@ const useStyles = makeStyles({
     justifyContent: 'space-between',
   },
 
-  navlink: {},
+  navlink: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    // border: '1px solid green',
+  },
+
+  navheading: {
+    fontFamily: 'Robot, sans-serif',
+    marginRight: '1em',
+    fontSize: '1.5rem',
+    color: 'black',
+    '&:hover': {
+      color: '#f4ca51',
+    },
+  },
   navlinkmen: {
     color: 'black',
+
     fontFamily: 'Robot, sans-serif',
-    fontSize: '1em',
+    fontSize: '1rem',
+    marginRight: '1em',
+    textDecoration: 'none',
+    '&:hover': {
+      color: '#f4ca51',
+    },
   },
 
   navlinkwomen: {
-    marginLeft: '1em',
     fontFamily: 'Robot, sans-serif',
-    fontSize: '1em',
-
+    fontSize: '1rem',
+    textDecoration: 'none',
     color: 'black',
+    '&:hover': {
+      color: '#f4ca51',
+    },
   },
 });
 
@@ -51,17 +74,21 @@ const Navbar = ({ cart }) => {
     <div>
       <AppBar position="sticky" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
-          {/* <Typography>Nike Shoe Store</Typography> */}
-          <div>
-            <ul className={classes.navlink}>
-              <Link to="/" as="li" className={classes.navlinkmen}>
-                Men
-              </Link>
+          <div className={classes.navlink}>
+            <span className={classes.navheading}>
+              <strong>NikeStore</strong>
+            </span>
+            <div>
+              <ul>
+                <Link to="/" className={classes.navlinkmen}>
+                  <strong>Men</strong>
+                </Link>
 
-              <Link to="womenproducts" as="li" className={classes.navlinkwomen}>
-                Women
-              </Link>
-            </ul>
+                <Link to="womenproducts" className={classes.navlinkwomen}>
+                  <strong>Women</strong>
+                </Link>
+              </ul>
+            </div>
           </div>
 
           <NavLink to="/">
@@ -69,7 +96,10 @@ const Navbar = ({ cart }) => {
               <img
                 src={logo}
                 alt="nikelogo"
-                style={{ width: '5em', height: '5em' }}
+                style={{
+                  width: '5em',
+                  height: '5em',
+                }}
               />
             </div>
           </NavLink>

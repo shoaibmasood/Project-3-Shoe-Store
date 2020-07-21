@@ -4,12 +4,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   thumbnailContainer: {
-    border: '1px solid pink',
     display: 'flex',
     flexDirection: 'column',
     overflowX: 'scroll',
     overflowY: 'scroll',
     height: '60vh',
+    marginTop: '1em',
     '&::-webkit-scrollbar': {
       display: 'none',
     },
