@@ -92,8 +92,8 @@ const productData = [
 
   {
     id: 6,
-    title: 'nike react infinity',
-    price: `$${220}`,
+    title: 'nike react infinity custom',
+    price: `$${180}`,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -105,12 +105,13 @@ const productData = [
     img: require('../../assests/png/custom-nike-react-infinity-run-flyknit-by-you-1-.png'),
     thumbnail: require('../../assests/custom-nike-react-infinity-run-flyknit-by-you.jpg'),
 
-    description: 'details about product',
+    description:
+      'The Nike React Infinity Run Flyknit By You is here for the long haul, delivering comfort and stability as you log your miles. More React foam and improved Flyknit in the upper are the canvas for your newest running innovation.',
   },
   {
     id: 7,
-    title: 'air-zoom-pegasus-running',
-    price: `$${220}`,
+    title: 'Air Jordan 1 Mid SE',
+    price: `$${125}`,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -119,15 +120,16 @@ const productData = [
       { size: 11, available: true },
       { size: 12, available: false },
     ],
-    img: require('../../assests/png/air-zoom-pegasus-36-mens-running-shoe-D24Mcz-1-.png'),
-    thumbnail: require('../../assests/air-zoom-pegasus-36-mens-running-shoe-D24Mcz.jpg'),
+    img: require('../../assests/png/air-jordan-1-mid-se-mens-shoe-kDdH3C-1-.png'),
+    thumbnail: require('../../assests/air-jordan-1-mid-se-mens-shoe-kDdH3C.jpg'),
 
-    description: 'details about product',
+    description:
+      'The Air Jordan 1 Mid SE maintains the timeless appeal of the OG AJ1, revamped with fresh colors and premium materials. Built with a lightweight Air-Sole unit and classic design lines, it captures the essence of the original through a modern lens.',
   },
   {
     id: 8,
-    title: 'air-zoom-pegasus-running',
-    price: `$${220}`,
+    title: 'Nike Metcon 5',
+    price: `$${97.7}`,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -136,15 +138,16 @@ const productData = [
       { size: 11, available: true },
       { size: 12, available: false },
     ],
-    img: require('../../assests/png/air-zoom-pegasus-36-mens-running-shoe-D24Mcz-1-.png'),
-    thumbnail: require('../../assests/air-zoom-pegasus-36-mens-running-shoe-D24Mcz.jpg'),
+    img: require('../../assests/png/metcon-5-mens-training-shoe-lFwjMP-1-.png'),
+    thumbnail: require('../../assests/metcon-5-mens-training-shoe-lFwjMP.jpg'),
 
-    description: 'details about product',
+    description:
+      'The Nike Metcon 5 is our most tuned Metcon yet. This means specific stability for heavy lifting, traction made for speed, and durability where you need it. It even includes a Hyperlift insert thats compatible with all prior versions of the Metcon. Meet your secret weapon for weight lifting and high-impact training.',
   },
   {
     id: 9,
-    title: 'air-zoom-pegasus-running',
-    price: `$${220}`,
+    title: 'Nike Air Max 2090',
+    price: `$${160}`,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -153,10 +156,11 @@ const productData = [
       { size: 11, available: true },
       { size: 12, available: false },
     ],
-    img: require('../../assests/png/air-zoom-pegasus-36-mens-running-shoe-D24Mcz-1-.png'),
-    thumbnail: require('../../assests/air-zoom-pegasus-36-mens-running-shoe-D24Mcz.jpg'),
+    img: require('../../assests/png/air-max-2090-mens-shoe-Kjct9t-1-.png'),
+    thumbnail: require('../../assests/air-max-2090-mens-shoe-Kjct9t.jpg'),
 
-    description: 'details about product',
+    description:
+      'Bring the past into the future with the Nike Air Max 2090, a bold look inspired by the DNA of the iconic Air Max 90. Brand-new Nike Air cushioning underfoot adds unparalleled comfort while transparent mesh and vibrantly colored details on the upper blend with timeless OG features for an edgy, modernized look.',
   },
 ];
 export default productData;

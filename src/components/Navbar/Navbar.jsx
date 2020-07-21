@@ -24,14 +24,15 @@ const useStyles = makeStyles({
 
   toolbar: {
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     justifyContent: 'space-between',
   },
 
   navlink: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'flex-end',
+
     // border: '1px solid green',
   },
 
@@ -44,6 +45,14 @@ const useStyles = makeStyles({
       color: '#f4ca51',
     },
   },
+
+  navlogo: {
+    display: 'flex',
+    flexDirection: 'column',
+    // justifyContent: 'center',
+    // alignItems: 'center',
+  },
+
   navlinkmen: {
     color: 'black',
 
@@ -75,9 +84,26 @@ const Navbar = ({ cart }) => {
       <AppBar position="sticky" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
           <div className={classes.navlink}>
-            <span className={classes.navheading}>
-              <strong>NikeStore</strong>
-            </span>
+            <div className={classes.navlogo}>
+              <NavLink to="/">
+                <div>
+                  <img
+                    src={logo}
+                    alt="nikelogo"
+                    style={{
+                      width: '50px',
+                      height: '50px',
+                    }}
+                  />
+                </div>
+              </NavLink>
+
+              <div>
+                <span className={classes.navheading}>
+                  <strong>NikeStore</strong>
+                </span>
+              </div>
+            </div>
             <div>
               <ul>
                 <Link to="/" className={classes.navlinkmen}>
@@ -91,18 +117,6 @@ const Navbar = ({ cart }) => {
             </div>
           </div>
 
-          <NavLink to="/">
-            <div>
-              <img
-                src={logo}
-                alt="nikelogo"
-                style={{
-                  width: '5em',
-                  height: '5em',
-                }}
-              />
-            </div>
-          </NavLink>
           <div>
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={cart} color="secondary">

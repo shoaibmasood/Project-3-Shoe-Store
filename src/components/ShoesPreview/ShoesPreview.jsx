@@ -15,6 +15,12 @@ const useStyles = makeStyles({
   image: {
     width: '120%',
     transform: 'rotate(30deg)',
+    transition: 'transform 450ms',
+    '&:hover': {
+      transform: 'scale(1.08)',
+      marginTop: '-2em',
+      cursor: 'pointer',
+    },
   },
 });
 
