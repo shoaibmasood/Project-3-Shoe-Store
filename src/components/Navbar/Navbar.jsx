@@ -1,12 +1,6 @@
 import React from 'react';
-// import styles from './Navbar.module.css';
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Badge,
-  IconButton,
-} from '@material-ui/core';
+
+import { AppBar, Toolbar, Badge, IconButton } from '@material-ui/core';
 
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { makeStyles } from '@material-ui/core/styles';
@@ -32,8 +26,6 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-
-    // border: '1px solid green',
   },
 
   navheading: {
@@ -49,8 +41,6 @@ const useStyles = makeStyles({
   navlogo: {
     display: 'flex',
     flexDirection: 'column',
-    // justifyContent: 'center',
-    // alignItems: 'center',
   },
 
   navlinkmen: {

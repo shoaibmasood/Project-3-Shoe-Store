@@ -1,5 +1,5 @@
 import React from 'react';
-import datas from '../../productdata/menproductdata/menproductdata';
+import datas from '../../../productdata/womenproductdata/womenproductdata';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -36,8 +36,7 @@ const useStyles = makeStyles({
   },
 });
 
-function ShoesList({ handleClickImage }) {
-  console.log(handleClickImage);
+function WomenShoeList({ handleClickImage }) {
   const classes = useStyles();
   return (
     <div className={classes.thumbnailContainer}>
@@ -56,4 +55,4 @@ function ShoesList({ handleClickImage }) {
   );
 }
 
-export default ShoesList;
+export default WomenShoeList;

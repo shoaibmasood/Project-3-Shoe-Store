@@ -5,6 +5,7 @@ import MenProducts from '../MenProducts/MenProducts';
 import WomenProducts from '../WomenProducts/WomenProducts';
 import Navbar from '../Navbar/Navbar';
 import MenDatas from '../../productdata/menproductdata/menproductdata';
+import WomenDatas from '../../productdata/womenproductdata/womenproductdata';
 import { Routes, Route } from 'react-router-dom';
 
 const useStyles = makeStyles({
@@ -31,10 +32,18 @@ const Papper = () => {
   const [productdata, setproductData] = useState(initialState);
   const [cart, setCart] = useState(0);
 
+  const initialStateWomen = WomenDatas[0];
+  const [womenProductData, setWomenProductData] = useState(initialStateWomen);
+
   const handleClickImage = (id) => {
     console.log(id);
     const foundproduct = MenDatas.find((data) => data.id === id);
     setproductData(foundproduct);
+  };
+
+  const handleClickImageWomen = (id) => {
+    const foundproduct = WomenDatas.find((data) => data.id === id);
+    setWomenProductData(foundproduct);
   };
 
   const handleClickCart = () => {
@@ -59,7 +68,16 @@ const Papper = () => {
             }
           />
 
-          <Route path="womenproducts" element={<WomenProducts />} />
+          <Route
+            path="womenproducts"
+            element={
+              <WomenProducts
+                productdata={womenProductData}
+                handleClickImage={handleClickImageWomen}
+                handleClickCart={handleClickCart}
+              />
+            }
+          />
         </Routes>
       </div>
     </Paper>
