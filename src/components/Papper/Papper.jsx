@@ -9,28 +9,28 @@ import WomenDatas from '../../productdata/womenproductdata/womenproductdata';
 import { Routes, Route } from 'react-router-dom';
 
 const useStyles = makeStyles({
-  papercontainer: {
-    // display: 'flex',
-  },
+  papercontainer: {},
 
   paper: {
-    // dsiplay: 'flex',
-    // flexDirection: 'column',
     height: 'auto',
     width: '95vw',
     backgroundColor: '#fefbec',
     // border: '3px solid green',
     borderRadius: 15,
-    // overflow: 'hidden',
   },
 });
 
 const Papper = () => {
   const classes = useStyles();
 
+  //Initial State for Menproduct Data
+
   const initialState = MenDatas[0];
   const [productdata, setproductData] = useState(initialState);
-  const [cart, setCart] = useState(0);
+
+  const [cart, setCart] = useState([]);
+
+  //Initial State for Women product Data
 
   const initialStateWomen = WomenDatas[0];
   const [womenProductData, setWomenProductData] = useState(initialStateWomen);
@@ -46,8 +46,13 @@ const Papper = () => {
     setWomenProductData(foundproduct);
   };
 
-  const handleClickCart = () => {
-    setCart(cart + 1);
+  const handleClickCart = (product) => {
+    console.log(window.location.href);
+    if (window.location.href === 'http://localhost:3000/') {
+      setCart([...cart, productdata]);
+    } else {
+      setCart([...cart, womenProductData]);
+    }
   };
 
   // console.log(cart);

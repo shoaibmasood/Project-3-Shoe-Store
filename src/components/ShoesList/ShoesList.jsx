@@ -37,7 +37,6 @@ const useStyles = makeStyles({
 });
 
 function ShoesList({ handleClickImage }) {
-  console.log(handleClickImage);
   const classes = useStyles();
   return (
     <div className={classes.thumbnailContainer}>

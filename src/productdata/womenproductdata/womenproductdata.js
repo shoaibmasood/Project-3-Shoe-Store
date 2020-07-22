@@ -28,7 +28,7 @@ const productData = [
       { size: 11, available: true },
       { size: 12, available: false },
     ],
-    // img: require('../../assests/women/png/'),
+    img: require('../../assests/women/png/air-max-2090-womens-shoe-nk9ZbX__1_-removebg-preview.png'),
     thumbnail: require('../../assests/women/air-max-2090-womens-shoe-nk9ZbX.jpg'),
     description:
       'Bring the past into the future with the Nike Air Max 2090. Inspired by the iconic Air Max 90, the 2090 features Nike Air cushioning underfoot that adds unparalleled comfort, while transparent mesh on the upper blends with timeless OG features for an edgy, modernized look.',
@@ -46,7 +46,7 @@ const productData = [
       { size: 11, available: true },
       { size: 12, available: false },
     ],
-    // img: require('../../assests/women/png/'),
+    img: require('../../assests/women/png/air-zoom-pegasus-37-womens-running-shoe-Jl0bDf__1_-removebg-preview.png'),
     thumbnail: require('../../assests/women/air-zoom-pegasus-37-womens-running-shoe-Jl0bDf.jpg'),
     description:
       'Reinvigorate your stride with the Nike Air Zoom Pegasus 37. Delivering the same fit and feel that runners love, the shoe has an all-new forefoot cushioning unit and foam for maximum responsiveness. The result is a durable, lightweight trainer designed for everyday running.',
@@ -64,7 +64,7 @@ const productData = [
       { size: 11, available: true },
       { size: 12, available: false },
     ],
-    // img: require('../../assests/women/png/'),
+    img: require('../../assests/women/png/air-zoom-superrep-womens-hiit-class-shoe-9BGJQ1__1_-removebg-preview.png'),
     thumbnail: require('../../assests/women/air-zoom-superrep-womens-hiit-class-shoe-9BGJQ1.jpg'),
     description:
       'The Nike Air Zoom SuperRep is designed for circuit training, HIIT, short runs and other fast-paced exercise. Zoom Air cushioning in the forefoot combines with a wide, stable heel to keep you moving and lifting comfortably.',
@@ -82,7 +82,7 @@ const productData = [
       { size: 11, available: true },
       { size: 12, available: false },
     ],
-    // img: require('../../assests/women/png/'),
+    img: require('../../assests/women/png/daybreak-womens-shoe-kB9Bls__1_-removebg-preview.png'),
     thumbnail: require('../../assests/women/daybreak-womens-shoe-kB9Bls.jpg'),
 
     description:
@@ -101,7 +101,7 @@ const productData = [
       { size: 11, available: true },
       { size: 12, available: false },
     ],
-    // img: require('../../assests/women/png/'),
+    img: require('../../assests/women/png/free-metcon-3-womens-training-shoe-mrrbn6__1_-removebg-preview.png'),
     thumbnail: require('../../assests/women/free-metcon-3-womens-training-shoe-mrrbn6.jpg'),
 
     description:
@@ -119,7 +119,7 @@ const productData = [
       { size: 11, available: true },
       { size: 12, available: false },
     ],
-    // img: require('../../assests/women/png/'),
+    img: require('../../assests/women/png/phantomvsn-pro-dynamic-fit-game-over-fg-firm-ground-soccer-cleat-rxZMtr__1_-removebg-preview.png'),
     thumbnail: require('../../assests/women/phantomvsn-pro-dynamic-fit-game-over-fg-firm-ground-soccer-cleat-rxZMtr.jpg'),
 
     description:
@@ -137,7 +137,7 @@ const productData = [
       { size: 11, available: true },
       { size: 12, available: false },
     ],
-    // img: require('../../assests/women/png/'),
+    img: require('../../assests/women/png/precision-4-flyease-extra-wide-basketball-shoe-CJZcXQ__1_-removebg-preview.png'),
     thumbnail: require('../../assests/women/precision-4-flyease-extra-wide-basketball-shoe-CJZcXQ.jpg'),
 
     description:
@@ -155,7 +155,7 @@ const productData = [
       { size: 11, available: true },
       { size: 12, available: false },
     ],
-    // img: require('../../assests/women/png/'),
+    img: require('../../assests/women/png/zoom-freak-1-multi-basketball-shoe-9gFS6H__1_-removebg-preview.png'),
     thumbnail: require('../../assests/women/zoom-freak-1-multi-basketball-shoe-9gFS6H.jpg'),
 
     description:

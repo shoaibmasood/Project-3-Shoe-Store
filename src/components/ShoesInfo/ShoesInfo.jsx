@@ -132,8 +132,10 @@ const ShoesInfo = ({ productdata, handleClickCart }) => {
         <span>Size Guide</span>
       </div>
       <div className={classes.shoesizecontainer}>
-        {shoesizes.map((item) => (
-          <Button className={classes.shoesize}>{item.size}</Button>
+        {shoesizes.map((item, index) => (
+          <Button className={classes.shoesize} key={index}>
+            {item.size}
+          </Button>
         ))}
       </div>
       <div className={classes.buttoncontainer}>
