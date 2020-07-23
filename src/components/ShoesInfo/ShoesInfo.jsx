@@ -102,7 +102,7 @@ const useStyles = makeStyles({
   },
 });
 
-const ShoesInfo = ({ productdata, handleClickCart }) => {
+const ShoesInfo = ({ productdata, handleClickCart, title }) => {
   const classes = useStyles();
 
   const shoesizes = productdata.sizes;
@@ -117,11 +117,12 @@ const ShoesInfo = ({ productdata, handleClickCart }) => {
   return (
     <div className={classes.cartcontainer}>
       <div className={classes.subheading}>
-        {window.location.href === 'http://localhost:3000/' ? (
+        <h2>{title}</h2>
+        {/* {window.location.href === 'http://localhost:3000/' ? (
           <h2>Men's Running Shoes</h2>
         ) : (
           <h2>Women's Running Shoes</h2>
-        )}
+        )} */}
       </div>
       <div style={{ marginTop: '1em' }}>
         <Typography className={classes.mainheading}>

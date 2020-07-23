@@ -45,6 +45,7 @@ const WomenProducts = ({ handleClickImage, handleClickCart, productdata }) => {
           <ShoesInfo
             productdata={productdata}
             handleClickCart={handleClickCart}
+            title="Women's Running Shoes"
           />
         </Grid>
       </Grid>
