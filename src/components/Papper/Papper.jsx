@@ -46,7 +46,7 @@ const Papper = () => {
     setWomenProductData(foundproduct);
   };
 
-  const handleClickCart = (product) => {
+  const handleClickCart = () => {
     console.log(window.location.href);
     if (window.location.href === 'http://localhost:3000/') {
       setCart([...cart, productdata]);

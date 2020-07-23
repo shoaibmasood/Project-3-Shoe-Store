@@ -117,7 +117,11 @@ const ShoesInfo = ({ productdata, handleClickCart }) => {
   return (
     <div className={classes.cartcontainer}>
       <div className={classes.subheading}>
-        <h2>Men's Running Shoe</h2>
+        {window.location.href === 'http://localhost:3000/' ? (
+          <h2>Men's Running Shoes</h2>
+        ) : (
+          <h2>Women's Running Shoes</h2>
+        )}
       </div>
       <div style={{ marginTop: '1em' }}>
         <Typography className={classes.mainheading}>
@@ -125,7 +129,7 @@ const ShoesInfo = ({ productdata, handleClickCart }) => {
         </Typography>
       </div>
       <div className={classes.price}>
-        <span>{productdata.price}</span>
+        <span>${productdata.price}</span>
       </div>
       <div className={classes.sizeheading}>
         <span>Select Size</span>

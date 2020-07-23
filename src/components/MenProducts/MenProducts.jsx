@@ -19,7 +19,6 @@ const MenProducts = ({ handleClickImage, handleClickCart, productdata }) => {
       <Grid
         container
         justifyContent="center"
-        // direction="column"
         spacing={1}
         className={classes.container}
       >

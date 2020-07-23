@@ -2,7 +2,7 @@ const productData = [
   {
     id: 1,
     title: 'Nike Air Max 270 G',
-    price: `$${150}`,
+    price: 150,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -19,7 +19,7 @@ const productData = [
   {
     id: 2,
     title: 'Nike Air Max 2090',
-    price: `$${150}`,
+    price: 150,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -37,7 +37,7 @@ const productData = [
   {
     id: 3,
     title: 'Nike Air Zoom Pegasus 37',
-    price: `$${120}`,
+    price: 120,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -55,7 +55,7 @@ const productData = [
   {
     id: 4,
     title: 'Nike Air Zoom SuperRep',
-    price: `$${100}`,
+    price: 100,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -73,7 +73,7 @@ const productData = [
   {
     id: 5,
     title: 'Nike Daybreak',
-    price: `$${90}`,
+    price: 90,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -92,7 +92,7 @@ const productData = [
   {
     id: 6,
     title: 'Nike Free Metcon 3',
-    price: `$${120}`,
+    price: 120,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -110,7 +110,7 @@ const productData = [
   {
     id: 7,
     title: 'Nike Phantom Vision Pro Dynamic Fit FG',
-    price: `$${90.97}`,
+    price: 90.97,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -128,7 +128,7 @@ const productData = [
   {
     id: 8,
     title: 'Nike Precision 4 FlyEase (Extra Wide)',
-    price: `$${70}`,
+    price: 70,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -146,7 +146,7 @@ const productData = [
   {
     id: 9,
     title: 'Zoom Freak 1 Multi',
-    price: `$${120}`,
+    price: 120,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },

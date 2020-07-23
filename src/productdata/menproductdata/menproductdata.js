@@ -2,7 +2,7 @@ const productData = [
   {
     id: 1,
     title: 'air zoom pegasus trail',
-    price: `$${107.97}`,
+    price: 107.97,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -19,7 +19,7 @@ const productData = [
   {
     id: 2,
     title: 'air zoom univers FlyEase',
-    price: `$${160}`,
+    price: 160,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -37,7 +37,7 @@ const productData = [
   {
     id: 3,
     title: 'zoom d unisex',
-    price: `$${90}`,
+    price: 90,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -55,7 +55,7 @@ const productData = [
   {
     id: 4,
     title: 'air max 270',
-    price: `$${100}`,
+    price: 100,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -74,7 +74,7 @@ const productData = [
   {
     id: 5,
     title: 'air zoom pegasus 36',
-    price: `$${220}`,
+    price: 220,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -93,7 +93,7 @@ const productData = [
   {
     id: 6,
     title: 'nike react infinity custom',
-    price: `$${180}`,
+    price: 180,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -111,7 +111,7 @@ const productData = [
   {
     id: 7,
     title: 'Air Jordan 1 Mid SE',
-    price: `$${125}`,
+    price: 125,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -129,7 +129,7 @@ const productData = [
   {
     id: 8,
     title: 'Nike Metcon 5',
-    price: `$${97.7}`,
+    price: 97.7,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },
@@ -147,7 +147,7 @@ const productData = [
   {
     id: 9,
     title: 'Nike Air Max 2090',
-    price: `$${160}`,
+    price: 160,
     sizes: [
       { size: 7, available: true },
       { size: 8, available: true },

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
@@ -30,16 +30,23 @@ function getModalStyle() {
 
 const useStyles = makeStyles((theme) => ({
   paper: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '1px',
     position: 'absolute',
     width: 400,
     height: 'auto',
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: '#fefbec',
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+    // overflowY: 'scroll',
+    // overflowX: 'scroll',
   },
   root: {
     display: 'flex',
+
+    justifyContent: 'space-between',
   },
   details: {
     display: 'flex',
@@ -47,9 +54,19 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     // flex: '1 0 auto',
+    textTransform: 'capitalize',
   },
   cover: {
-    width: 151,
+    width: 100,
+  },
+
+  checkoutbutton: {
+    color: 'white',
+    backgroundColor: '#f5cb52',
+    '&:hover': {
+      backgroundColor: '#FCF5CA',
+      color: 'black',
+    },
   },
 }));
 
@@ -61,9 +78,11 @@ function Cart({ cart }) {
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
 
-  // const [cartData, setCartData] = useState([...cart]);
+  // Strping all values of price from cart array
+  const prices = cart.map((price) => price.price);
 
-  // console.log(cartData[0]);
+  // Total for checkout
+  const total = prices.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
   const handleOpen = () => {
     setOpen(true);
@@ -73,43 +92,46 @@ function Cart({ cart }) {
     setOpen(false);
   };
 
-  const body = cart.map((item, index) => (
-    <div style={modalStyle} className={classes.paper} key={index}>
-      <Card className={classes.root}>
-        <div className={classes.details}>
+  const body = (
+    <div style={modalStyle} className={classes.paper}>
+      {cart.map((item, index) => (
+        <Card className={classes.root} key={index}>
+          <div className={classes.details}>
+            <CardContent className={classes.content}>
+              <Typography component="h6" variant="h6">
+                {item.title}
+              </Typography>
+              <Typography variant="subtitle1" color="textSecondary">
+                {item.price}
+              </Typography>
+            </CardContent>
+          </div>
           <CardMedia
             className={classes.cover}
             image={item.thumbnail}
             title="Live from space album cover"
           />
-          <CardContent className={classes.content}>
-            <Typography component="h5" variant="h5">
-              {item.title}
-            </Typography>
-            <Typography variant="subtitle1" color="textSecondary">
-              {item.price}
-            </Typography>
-          </CardContent>
-        </div>
-      </Card>
+        </Card>
+      ))}
+      <Button
+        variant="contained"
+        className={classes.checkoutbutton}
+        onClick={() =>
+          alert(`Your's Total Amount is $${total}, Click ok to purchase`)
+        }
+      >
+        Check out
+      </Button>
     </div>
-  ));
+  );
 
   return (
     <div>
       <IconButton aria-label="show 17 new notifications" color="inherit">
         <Badge badgeContent={cart.length} color="secondary">
           <ShoppingCartIcon onClick={handleOpen} />
-          <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="simple-modal-title"
-            aria-describedby="simple-modal-description"
-          >
-            <div>
-              {body}
-              <Button> Check out</Button>
-            </div>
+          <Modal open={open} onClose={handleClose}>
+            <div>{body}</div>
           </Modal>
         </Badge>
       </IconButton>
