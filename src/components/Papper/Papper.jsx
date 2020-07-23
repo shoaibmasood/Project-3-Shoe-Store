@@ -34,24 +34,25 @@ const Papper = () => {
   const initialStateWomen = WomenDatas[0];
   const [womenProductData, setWomenProductData] = useState(initialStateWomen);
 
+  const [menFlag, setMenFlag] = useState(true);
+
   const handleClickImage = (id) => {
     console.log(id);
     const foundproduct = MenDatas.find((data) => data.id === id);
     setproductData(foundproduct);
+    setMenFlag(true);
   };
 
   const handleClickImageWomen = (id) => {
     const foundproduct = WomenDatas.find((data) => data.id === id);
     setWomenProductData(foundproduct);
+    setMenFlag(false);
   };
 
   const handleClickCart = () => {
-    console.log(window.location.href);
-    if (window.location.href === 'http://localhost:3000/') {
-      setCart([...cart, productdata]);
-    } else {
-      setCart([...cart, womenProductData]);
-    }
+    menFlag
+      ? setCart([...cart, productdata])
+      : setCart([...cart, womenProductData]);
   };
 
   return (

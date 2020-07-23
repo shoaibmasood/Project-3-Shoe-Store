@@ -118,11 +118,6 @@ const ShoesInfo = ({ productdata, handleClickCart, title }) => {
     <div className={classes.cartcontainer}>
       <div className={classes.subheading}>
         <h2>{title}</h2>
-        {/* {window.location.href === 'http://localhost:3000/' ? (
-          <h2>Men's Running Shoes</h2>
-        ) : (
-          <h2>Women's Running Shoes</h2>
-        )} */}
       </div>
       <div style={{ marginTop: '1em' }}>
         <Typography className={classes.mainheading}>
