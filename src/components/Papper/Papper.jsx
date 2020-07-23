@@ -15,7 +15,6 @@ const useStyles = makeStyles({
     height: 'auto',
     width: '95vw',
     backgroundColor: '#fefbec',
-    // border: '3px solid green',
     borderRadius: 15,
   },
 });
@@ -54,8 +53,6 @@ const Papper = () => {
       setCart([...cart, womenProductData]);
     }
   };
-
-  // console.log(cart);
 
   return (
     <Paper elevation={10} className={classes.paper}>

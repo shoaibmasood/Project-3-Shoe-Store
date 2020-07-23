@@ -40,8 +40,6 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-    // overflowY: 'scroll',
-    // overflowX: 'scroll',
   },
   root: {
     display: 'flex',
@@ -71,8 +69,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Cart({ cart }) {
-  // console.log(cart);
-
   const classes = useStyles();
 
   const [modalStyle] = React.useState(getModalStyle);

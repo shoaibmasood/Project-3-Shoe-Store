@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
-// import ShoesList from '../ShoesList/ShoesList';
 import WomenShoeList from '../WomenProducts/WomenShoeList/WomenShoeList';
 import ShoesPreview from '../ShoesPreview/ShoesPreview';
 import ShoesInfo from '../ShoesInfo/ShoesInfo';
