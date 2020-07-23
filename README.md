@@ -3,6 +3,7 @@ In this Webapp a user can select products by clicking on Productlist, and also b
 
 ## Project View
 ![](https://github.com/shoaibmasood/Project-3-Shoe-Store/blob/master/src/assests/finalPreview/ShoesStoreFullscreenPreview.png)
+![](https://github.com/shoaibmasood/Project-3-Shoe-Store/blob/master/src/assests/finalPreview/ShoeStoreMobileView.png)
 ## Usage
 ```
 npm install
